@@ -1,13 +1,20 @@
 import { useNavigate, useParams } from "react-router-dom"
-import { useEffect} from "react"
+import { useEffect } from "react"
 import HousingInfos from "../../components/HousingInfos"
 import HousingData from "../../data/housingData"
 import styled from 'styled-components'
 import Carrousel from "../../components/Carrousel"
+import Collapse from "../../components/Collapse"
 
 const HousingDisplay = styled.main`
 display: flex;
 flex-direction: column;
+`
+
+const CollapsesContainer = styled.section`
+display: flex;
+width: 92%;
+margin: 0% 4%;
 `
 
 function Housing() {
@@ -29,12 +36,25 @@ function Housing() {
 			tags,
             host,
             rating,
+			description,
+			equipments
 		} = CurrentHousing;
+
+		const EquipList =
+		equipments.map((item, index) => (
+			<li key={index} className="equipList">
+				{item}
+			</li>
+		));
 
     return (
 	<HousingDisplay>
 		<Carrousel pictures={pictures}/>
     	<HousingInfos title={title} location={location} tags={tags} host={host} rating={rating}/>
+		<CollapsesContainer>
+			<Collapse collapseTitle="Description" collapseText={description} />
+			<Collapse collapseTitle="Équipements" collapseText={EquipList} />
+		</CollapsesContainer>
 	</HousingDisplay>
     )
 }}

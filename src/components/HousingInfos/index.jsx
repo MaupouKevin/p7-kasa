@@ -8,6 +8,7 @@ const HousingContainer = styled.article`
 `
 const HousingInfo = styled.section`
     display: flex;
+    width: 60%;
     justify-content: flex-start;
     flex-direction: column;
 `
@@ -33,7 +34,7 @@ const TagsContainer = styled.div`
     justify-content: flex-start;
     flex-wrap: wrap;
     width: 100%;
-    gap: 4%;
+    gap: 3%;
     margin: 20px 0px;
 `
 
