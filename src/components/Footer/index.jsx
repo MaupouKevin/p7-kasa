@@ -1,35 +1,46 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import footerLogo from '../../assets/footerLogo.png'
+import { mobileSize, tabletSize } from "../../utils/style/GlobalStyle"
 
 
 const FooterWrapper = styled.footer`
-position: relative;
 width: 100%;
-height: 210px;
+height: 135px;
+padding: 75px 0px 0px 0px;
 background-color: black;
+
+@media (max-width: ${mobileSize}) {
+  padding: 65px 0px 0px 0px;
+  height: 145px;
+};
 `
 
 const FooterLogo = styled.img `
-position: absolute;
-top: 40%;
-left: 50%;
-transform: translate(-50%, -50%);
 width: 122px;
 height: 39.5px;
-display: flex;
 `
 
 const FooterCopyRight = styled.p`
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-family: 'Montserrat';
+display: flex;
+justify-content: center;
 font-style: normal;
-font-weight: 500;
 font-size: 24px;
 color: white;
+margin: 30px 0px 0px 0px;
+
+@media (max-width: ${tabletSize}) {
+  font-size: 18px;
+}
+
+@media (max-width: ${mobileSize}) {
+  font-size: 12px;
+};
+`
+
+const FooterLink = styled(Link)`
+display: flex;
+justify-content: center;
 `
 
 function Footer() {
@@ -38,9 +49,9 @@ function Footer() {
       };
     return (
       <FooterWrapper>
-        <Link onClick={handleLinkClick}>
+        <FooterLink onClick={handleLinkClick}>
           <FooterLogo src={footerLogo} />
-        </Link>
+        </FooterLink>
         <FooterCopyRight>© 2020 Kasa. All rights reserved</FooterCopyRight>
       </FooterWrapper>
     )

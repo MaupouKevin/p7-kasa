@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import data from '../../data/housingData';
-import Card from '../Card';
+import styled from 'styled-components'
+import data from '../../data/housingData'
+import Card from '../Card'
+import { mobileSize, tabletSize } from "../../utils/style/GlobalStyle"
 
 
 const CardsContainer = styled.article`
@@ -12,6 +13,16 @@ const CardsContainer = styled.article`
     margin: 2% 6%;
     padding: 2%;
     border-radius: 20px;
+
+    @media (max-width: ${tabletSize}) {
+        margin: 2% 5%;
+    }
+    
+    @media (max-width: ${mobileSize}) {
+        margin: 2% 5%;
+        padding: 0%;
+        background-color: #FFFFFF;    
+    };
 `
 
 function CardContainer() {

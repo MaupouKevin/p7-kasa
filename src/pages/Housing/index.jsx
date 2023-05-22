@@ -5,6 +5,7 @@ import HousingData from "../../data/housingData"
 import styled from 'styled-components'
 import Carrousel from "../../components/Carrousel"
 import Collapse from "../../components/Collapse"
+import { mobileSize } from "../../utils/style/GlobalStyle"
 
 const HousingDisplay = styled.main`
 display: flex;
@@ -13,8 +14,13 @@ flex-direction: column;
 
 const CollapsesContainer = styled.section`
 display: flex;
-width: 92%;
-margin: 0% 4%;
+width: 90%;
+margin: 0% 5%;
+
+@media (max-width: ${mobileSize}) {
+	flex-direction: column;
+	margin: 0% 4% 10% 4%;
+} 
 `
 
 function Housing() {

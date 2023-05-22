@@ -1,16 +1,33 @@
 import styled from 'styled-components';
 import fullStar from '../../assets/fullStar.png'
 import emptyStar from '../../assets/emptyStar.png'
+import { mobileSize, tabletSize } from "../../utils/style/GlobalStyle"
 
 const StarsContainer = styled.div`
 display: flex;
 margin-top: 10px;
+align-items: center;
 gap: 15px;
 justify-content: flex-end;
+
+@media (max-width: ${mobileSize}) {
+	margin-top: 0px;
+	gap: 10px;
+} 
 `
 
 const Stars = styled.img`
 width:24px;
+
+@media (max-width: ${tabletSize}) {
+	width: 20px;
+	height: 20px;
+  }
+
+@media (max-width: ${mobileSize}) {
+	width: 16px;
+	height: 16px;
+} 
 `
 
 function Rating({ rating }) {

@@ -3,7 +3,7 @@ import imgUrlHome from "../../assets/IMG.png"
 import CardContainer from "../../components/CardsContainer";
 
 function Home() {
-    const textHome = "Chez vous, partout et ailleurs";
+    const textHome = "Chez vous,\n partout et ailleurs";
     
     return (
       <main>

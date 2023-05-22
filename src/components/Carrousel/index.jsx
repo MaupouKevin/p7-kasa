@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import leftArrow from '../../assets/leftArrow.png' 
-import rightArrow from '../../assets/rightArrow.png' 
+import rightArrow from '../../assets/rightArrow.png'
+import { mobileSize, tabletSize } from "../../utils/style/GlobalStyle"
 
 const CarrouselDisplay = styled.section`
     display: flex;
@@ -9,33 +10,71 @@ const CarrouselDisplay = styled.section`
     width: 88%;
     height: 415px;
     margin: 0% 6%;
+
+    @media (max-width: ${tabletSize}) {
+        width: 90%;
+        height: 315px;
+        margin: 0% 5%;
+    }
+    
+    @media (max-width: ${mobileSize}) {
+        width: 90%;
+        height: 255px;
+        margin: 0% 5%;
+    };
 `
 
 const CarrouselPic = styled.img`
     width: 100%;
     border-radius: 25px;
     object-fit: cover;
+
+    @media (max-width: ${tabletSize}) {
+        border-radius: 17px;
+    }
+    
+    @media (max-width: ${mobileSize}) {
+        border-radius: 10px;
+    };
 `
 
 const LeftArrow = styled.img`
     width: 46px;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
+    top: 40%;
     left: 3%;
     opacity: 0.6;
+    cursor: pointer;
+
+    @media (max-width: ${tabletSize}) {
+        width: 32px;
+    }
+    
+    @media (max-width: ${mobileSize}) {
+        width: 12px;
+        top: 45%;
+    };
 `
 
 const RightArrow = styled.img`
     position: absolute;
+    transform-origin: 50px 50px;
     width: 46px;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    right: 0%;
+    top: 40%;
+    right: 3%;
     opacity: 0.6;
+    cursor: pointer;
+
+    @media (max-width: ${tabletSize}) {
+        width: 32px;
+    }
+    
+    @media (max-width: ${mobileSize}) {
+        width: 12px;
+        top: 45%;
+    };
 `
 const CarrouselCount = styled.span`
-font-family: 'Montserrat';
 font-size: 18px;
 color: #FFFFFF;
 position: absolute;

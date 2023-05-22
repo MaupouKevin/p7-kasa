@@ -2,6 +2,7 @@ import Banner from "../../components/Banner"
 import imgUrlAbout from "../../assets/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png"
 import Collapse from "../../components/Collapse"
 import styled from 'styled-components'
+import { mobileSize } from "../../utils/style/GlobalStyle"
 
 const AboutMain = styled.main`
     display: flex;
@@ -12,6 +13,10 @@ const CollapsesContainer = styled.section`
     flex-direction: column;
     align-items: center;
     margin: 2% 10% 5% 10%;
+    
+    @media (max-width: ${mobileSize}) {
+        margin: 2% 5% 5% 5%;
+    } 
 `
 
 function About() {
@@ -27,12 +32,12 @@ function About() {
 return (
 
         <AboutMain>
-        <Banner imageUrl={imgUrlAbout} text=''/>
+        <Banner imageUrl={imgUrlAbout} text='' isAboutPage={true}/>
         <CollapsesContainer>
-            <Collapse collapseTitle="Fiabilité" collapseText={FiabiliteText} page="pageAbout" />
-            <Collapse collapseTitle="Respect" collapseText={RespectText} page="pageAbout"/>
-            <Collapse collapseTitle="Service" collapseText={ServiceText} page="pageAbout"/>
-            <Collapse collapseTitle="Sécurité" collapseText={SecuriteText} page="pageAbout"/>
+            <Collapse collapseTitle="Fiabilité" collapseText={FiabiliteText} page="pageAbout" isAboutPage={true}/>
+            <Collapse collapseTitle="Respect" collapseText={RespectText} page="pageAbout" isAboutPage={true}/>
+            <Collapse collapseTitle="Service" collapseText={ServiceText} page="pageAbout" isAboutPage={true}/>
+            <Collapse collapseTitle="Sécurité" collapseText={SecuriteText} page="pageAbout" isAboutPage={true}/>
             </CollapsesContainer>
         </AboutMain>
 
