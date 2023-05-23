@@ -19,6 +19,7 @@ const CardsContainer = styled.article`
     }
     
     @media (max-width: ${mobileSize}) {
+        width: 90%;
         margin: 2% 5%;
         padding: 0%;
         background-color: #FFFFFF;    

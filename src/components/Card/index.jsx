@@ -51,7 +51,7 @@ const CardLink = styled(Link)`
     }
 
     @media (max-width: ${mobileSize}) {
-        width: 100%;
+        width: 335px;
         height: 255px;
         margin: 2% 0%;
     };
