@@ -3,14 +3,18 @@ import styled from 'styled-components';
 import { mobileSize, tabletSize } from "../../utils/style/GlobalStyle"
 
 const CardImg = styled.img`
+    position: absolute;
     width: 100%;
-    height: 75%;
+    height: 100%;
     display: flex;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
+    filter: brightness(80%);
+    z-index: 0;
 `
 
 const CardTitle = styled.h2`
+    position: absolute;
+    bottom: 1%;
     display: flex;
     align-items: center;
     width: 90%;
@@ -20,6 +24,7 @@ const CardTitle = styled.h2`
     font-weight: 500;
     color: white;
     margin: 15px 10px;
+    z-index: 1;
 
     @media (max-width: ${tabletSize}) {
         margin: 10px 10px;
@@ -30,12 +35,12 @@ const CardTitle = styled.h2`
     };
 `
 const CardLink = styled(Link)`
+    position : relative;
     display: flex;
     flex-direction: column;
     width: 340px;
     height: 340px;
     border-radius: 10px;
-    background: linear-gradient(rgba(255, 99, 99, 167) 0%, rgba(200, 72, 72, 134) 75%, rgba(145, 55, 55, 100) 100%);
     text-decoration: none;
     margin: 2% 2%;
 
