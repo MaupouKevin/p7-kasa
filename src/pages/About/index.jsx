@@ -34,10 +34,10 @@ return (
         <AboutMain>
         <Banner imageUrl={imgUrlAbout} text='' isAboutPage={true}/>
         <CollapsesContainer>
-            <Collapse collapseTitle="Fiabilité" collapseText={FiabiliteText} page="pageAbout" isAboutPage={true}/>
-            <Collapse collapseTitle="Respect" collapseText={RespectText} page="pageAbout" isAboutPage={true}/>
-            <Collapse collapseTitle="Service" collapseText={ServiceText} page="pageAbout" isAboutPage={true}/>
-            <Collapse collapseTitle="Sécurité" collapseText={SecuriteText} page="pageAbout" isAboutPage={true}/>
+            <Collapse collapseTitle="Fiabilité" collapseText={FiabiliteText} isAboutPage={true}/>
+            <Collapse collapseTitle="Respect" collapseText={RespectText} isAboutPage={true}/>
+            <Collapse collapseTitle="Service" collapseText={ServiceText} isAboutPage={true}/>
+            <Collapse collapseTitle="Sécurité" collapseText={SecuriteText} isAboutPage={true}/>
             </CollapsesContainer>
         </AboutMain>
 

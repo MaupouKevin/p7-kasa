@@ -58,8 +58,8 @@ function Housing() {
 		<Carrousel pictures={pictures}/>
     	<HousingInfos title={title} location={location} tags={tags} host={host} rating={rating}/>
 		<CollapsesContainer>
-			<Collapse collapseTitle="Description" collapseText={description} />
-			<Collapse collapseTitle="Équipements" collapseText={EquipList} />
+			<Collapse collapseTitle="Description" collapseText={description}/>
+			<Collapse collapseTitle="Équipements" collapseText={EquipList}/>
 		</CollapsesContainer>
 	</HousingDisplay>
     )

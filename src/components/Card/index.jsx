@@ -22,6 +22,7 @@ const CardTitle = styled.h2`
     font-family: 'Montserrat';
     font-size: 18px;
     font-weight: 500;
+    text-shadow: 1px 2px 3px rgba(0,0,0, 0.5);
     color: white;
     margin: 15px 10px;
     z-index: 1;
@@ -52,7 +53,7 @@ const CardLink = styled(Link)`
 
     @media (max-width: ${mobileSize}) {
         width: 335px;
-        height: 255px;
+        height: 340px;
         margin: 2% 0%;
     };
 `

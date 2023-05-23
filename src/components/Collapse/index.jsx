@@ -68,15 +68,15 @@ const UpArrow = styled.img`
 const  CollapseHidden = styled.div`
 display: flex;
 height: ${({ visible, height }) => (visible ? height : "0px")};
-display: ${({ visible }) => (visible ? "block" : "none")};
+display: ${({ visible }) => (visible ? "flex" : "none")};
 opacity: ${({ visible }) => (visible ? 1 : 0)};
 `
-
 
 const CollapseText = styled.p`
 display: flex;
 flex-direction: column;
 list-style: none;
+width: 100%;
 height: 230px;
 margin: 0px;
 padding: 30px 20px 20px 20px;
@@ -89,7 +89,7 @@ ${props =>
   props.isAboutPage &&
   css`
   height: fit-content;
-  `};
+  `}
 
     @media (max-width: ${tabletSize}) {
       font-size: 16px;
@@ -100,15 +100,9 @@ ${props =>
       font-size: 12px;
       height: 145px;
     }
-
-/* ${({ pageAbout }) =>
-pageAbout &&
-css`
-  height: fit-content;
-`} */
 `
 
-function Collapse ( props, page, isAboutPage ) {
+function Collapse ( props ) {
 
     const [toggle, setToggle] = useState(false); // je definie le state du toggle (et false par défaut)
 
@@ -116,8 +110,6 @@ function Collapse ( props, page, isAboutPage ) {
 		//je définie la fonction toggleState qui modifie la valeur toggle au clic
 		setToggle(!toggle);
 	};
-
-    const pageAboutStyle = page === "pageAbout";
 
     return (
         <CollapseContainer >
@@ -129,14 +121,21 @@ function Collapse ( props, page, isAboutPage ) {
           <DownArrow src={downArrow} alt="Down Arrow" />
         )}
             </CollapseVisible>
-            <CollapseHidden visible={toggle} isAboutPage={isAboutPage}>
-                <CollapseText pageAbout={pageAboutStyle}>{props.collapseText}</CollapseText>
+            <CollapseHidden visible={toggle} isAboutPage={props.isAboutPage}>
+                <CollapseText isAboutPage={props.isAboutPage}>{props.collapseText}</CollapseText>
             </CollapseHidden>
         </CollapseContainer>
 
     )
 }
 Collapse.propTypes = {
-  isAboutPage: PropTypes.bool
-};
+  isAboutPage: PropTypes.bool.isRequired,
+  collapseHeight: PropTypes.string.isRequired,
+}
+
+Collapse.defaultProps = {
+  isAboutPage: false,
+  collapseHeight: '0px',
+}
+
 export default Collapse
