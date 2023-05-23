@@ -30,7 +30,7 @@ function CardContainer() {
     const housingData = data;
     if (!Array.isArray(housingData)) {
         console.error("Les données de logement ne sont pas au bon format.");
-        return null; // Ou afficher un message d'erreur approprié
+        return null;
       }
     return (
         <CardsContainer>

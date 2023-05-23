@@ -45,11 +45,10 @@ z-index: 0;
 @media (max-width: ${mobileSize}) {
   height: 111px;
   border-radius: 10px;
-  ${props =>
+  ${props =>  /* Condition CSS basée sur la prop isAboutPage */
     props.isAboutPage &&
-    css`
-    height: 223px;
-    `}
+    css  /* Hauteur de la bannière lorsque isAboutPage est true */
+    `height: 223px; `}
 }
 
 
@@ -91,9 +90,9 @@ function Banner({ imageUrl, text, isAboutPage }) {
   }
 
 Banner.propTypes = {
-    imageUrl: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    isAboutPage: PropTypes.bool,   
+    imageUrl: PropTypes.string.isRequired, // Propriété pour spécifier l'URL de l'image de la bannière
+    text: PropTypes.string.isRequired, // Propriété pour spécifier le texte de la bannière
+    isAboutPage: PropTypes.bool, // Propriété pour indiquer si la bannière est sur la page "About" ou non
   };
 
   Banner.defaultProps = {
