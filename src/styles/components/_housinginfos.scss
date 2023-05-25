@@ -1,0 +1,128 @@
+.housinginfos {
+  display: flex;
+  margin: 1.5% 6%;
+  justify-content: space-between;
+
+  @include media-query(tablet) {
+    margin: 1.5% 5%;
+  }
+
+  @include media-query(mobile) {
+    margin: 1.5% 5%;
+    flex-direction: column;
+  }
+
+  &_info {
+      display: flex;
+      width: 60%;
+      justify-content: flex-start;
+      flex-direction: column;
+      &_title {
+        font-size: 36px;
+        font-weight: 500;
+        margin: 5px 0px;
+        @include media-query(tablet) {
+          font-size: 27px;
+        }
+
+        @include media-query(mobile) {
+          font-size: 18px;
+        }
+      };
+
+      &_location {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 5px 0px;
+        @include media-query(tablet) {
+          font-size: 16px;
+        }
+        @include media-query(mobile) {
+          font-size: 14px;
+        }
+      };
+
+      &_tags {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          width: 100%;
+          gap: 3%;
+          margin: 20px 0px;
+          @include media-query(mobile) {
+            flex-wrap: nowrap;
+            margin: 10px 0px 0px 0px;
+          }
+
+          &_tag {    
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 5px 20px;
+              margin-bottom: 10px;
+              border-radius: 10px;
+              font-size: 14px;
+              background: rgb(255,97,97);
+              color: white;
+              @include media-query(tablet) {
+                font-size: 12px;
+              }
+
+              @include media-query(mobile) {
+                font-size: 10px;
+                border-radius: 5px;
+                padding: 4px 10px;
+                white-space: nowrap;
+              }
+          };
+      };
+  };
+
+  &_rates{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      
+      @include media-query(mobile) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+      
+      &_host {
+          display: flex;
+          justify-content: flex-end;
+          gap: 5%;
+          align-items: center;
+
+          &_name {
+              display: flex;
+              width: 54%;
+              font-family: Montserrat;
+              font-weight: 500;
+              font-size: 18px;
+              text-align: right;
+              word-wrap: break-word;
+              @include media-query(tablet) {
+                font-size: 16px;
+              }
+              @include media-query(mobile) {
+                font-size: 12px;
+              }      
+          };
+          
+          &_picture {
+              width: 64px;
+              height: 64px;
+              border-radius: 50%;
+              @include media-query(tablet) {
+                width: 48px;
+                height: 48px;
+              }
+              @include media-query(mobile) {
+                width: 32px;
+                height: 32px;
+              }   
+          };
+      };
+  };
+};

@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-end;
+
+  &__icon {
+    width:24px;
+    
+    @include media-query(tablet) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include media-query(mobile) {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
