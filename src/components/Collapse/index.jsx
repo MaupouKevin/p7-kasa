@@ -130,12 +130,10 @@ function Collapse ( props ) {
 }
 Collapse.propTypes = {
   isAboutPage: PropTypes.bool.isRequired,
-  collapseHeight: PropTypes.string.isRequired,
 }
 
 Collapse.defaultProps = {
   isAboutPage: false,
-  collapseHeight: '0px',
 }
 
 export default Collapse

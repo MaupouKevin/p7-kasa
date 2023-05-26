@@ -44,6 +44,7 @@ justify-content: center;
 `
 
 function Footer() {
+  const effectiveYear = new Date().getFullYear();
     const handleLinkClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       };
@@ -52,7 +53,8 @@ function Footer() {
         <FooterLink onClick={handleLinkClick}>
           <FooterLogo src={footerLogo} />
         </FooterLink>
-        <FooterCopyRight>© 2020 Kasa. All rights reserved</FooterCopyRight>
+        <FooterCopyRight> &copy;
+  {effectiveYear} Kasa. All rights reserved</FooterCopyRight>
       </FooterWrapper>
     )
   }
