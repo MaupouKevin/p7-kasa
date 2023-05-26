@@ -1,0 +1,15 @@
+.housing {
+  display: flex;
+  flex-direction: column;
+
+  &_collapses {
+    display: flex;
+    width: 90%;
+    margin: 0% 5%;
+      
+    @include media-query(mobile) {
+      flex-direction: column;
+      margin: 0% 4% 10% 4%;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.card {
+  position : relative;
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 2% 2%;
+  transform: scale(1);
+  transition: transform 300ms;
+
+  @include media-query(tablet) {
+    width: 270px;
+    height: 270px;
+    margin: 2% 0%;
+  }
+
+  @include media-query(mobile) {
+    width: 335px;
+    height: 255px;
+    margin: 2% 0%;
+  }
+
+  &_img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    filter: brightness(80%);
+    z-index: 0;
+  }
+
+  &_title {
+    position: absolute;
+    bottom: 1%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    text-shadow: 1px 2px 3px rgba(0,0,0, 0.5);
+    color: white;
+    margin: 15px 10px;
+    z-index: 1;
+    @include media-query(tablet) {
+      margin: 10px 10px;
+    }
+
+    @include media-query(mobile) {
+      margin: 5px 10px;  
+    }
+  }
+
+  &:hover {
+   transform: scale(1.05);
+  }
+}

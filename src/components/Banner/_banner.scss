@@ -1,0 +1,66 @@
+.banner {
+  position: relative;
+  display: inline-block;
+  width: 88%;
+  margin: 0% 6%;
+  border-radius: 25px;
+  @include media-query(tablet) {
+    width: 90%;
+    margin: 0% 5%;
+  }
+
+  @include media-query(mobile) {
+    width: 90%;
+    margin: 0% 5%;
+    white-space: pre-line;
+  }
+
+  &_img {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(75%);
+    border-radius: 25px;
+    height: 223px;
+    z-index: 0;
+    @include media-query(tablet) {
+      height: 167px;
+      border-radius: 18px;
+    }
+
+    @include media-query(mobile) {
+      height: 111px;
+      border-radius: 10px;
+    }
+  }
+
+  &_text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: 500;
+    color: #FFFFFF;
+    z-index: 1;
+    margin: 0px;
+    text-align: center;
+    @include media-query(tablet) {
+      font-size: 36px;
+
+    }
+  
+    @include media-query(mobile) {
+      left: 55%;
+      font-size: 24px;
+      text-align: inherit;
+    }
+  }
+}
+.banner.is-about-page {
+  .banner_img {
+    @include media-query(mobile) {
+      height: 223px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin: 3% 6%;
+    
+  @include media-query(tablet) {
+    margin: 3% 5%;
+  }
+
+  @include media-query(mobile) {
+    margin: 4% 5%;
+  }
+
+  &_logo {
+      display: flex;
+      justify-content: flex-end;
+      @include media-query(tablet) {
+        width: 80%;
+      }
+      @include media-query(mobile) {
+        width: 60%;
+      }
+  }
+
+  &_nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: absolute;
+      width: 40%;
+      height: 100%;
+      right: 0%;
+      flex-wrap: nowrap;
+      @include media-query(tablet) {
+        width: 58%;
+      }
+
+      @include media-query(mobile) {
+        width: 60%;
+      }
+      
+      &_links {
+          display: flex;
+          margin-left: 20%;
+          color: #FF6060;
+          font-weight: 500;
+          font-size: 24px;
+          text-decoration: none;
+          &:focus,
+          &:active {
+              text-decoration: underline;
+          };
+          @include media-query(tablet) {
+            font-size: 16px;
+            margin-left: 15%;
+          }
+
+          @include media-query(mobile) {
+            font-size: 12px;
+            margin-left: 10%;
+            text-transform: uppercase;
+          }
+      }      
+  }   
+}
