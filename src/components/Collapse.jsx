@@ -23,7 +23,7 @@ function Collapse(props) {
       <div className={`collapse_hidden ${toggle ? 'is-visible' : ''}`} data-isaboutpage={props.isAboutPage ? 'true' : 'false'}>
         {Array.isArray(props.collapseText) ? (
           <ul>
-            {props.collapseText.map((text, index) => (
+            {props.collapseText.map((text, index) => (  /* Boucle pour afficher chaque élément du tableau collapseText */
               <li key={index}>{text}</li>
             ))}
           </ul>

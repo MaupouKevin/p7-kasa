@@ -3,9 +3,7 @@ import Banner from "../components/Banner";
 import image from "../assets/img/banner.png";
 import CardsContainer from "../components/CardsContainer";
 
-
-
-const Home = () => {
+function Home() {
   return (
     <main className="main">
       <Banner image={image} />

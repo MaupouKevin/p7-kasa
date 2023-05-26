@@ -3,11 +3,8 @@ import { Link } from "react-router-dom";
 
 import footerLogo from "../assets/img/footerLogo.png";
 
-const Footer = () => {
+function Footer()  {
   const effectiveYear = new Date().getFullYear();
-
-
-
     const handleLinkClick = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       };

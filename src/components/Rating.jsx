@@ -2,7 +2,7 @@ import React from "react";
 import fullStar from "../assets/img/fullStar.png";
 import emptyStar from "../assets/img/emptyStar.png";
 
-const Rating = ({ rating }) => {
+function Rating({ rating }) {
   const stars = [1, 2, 3, 4, 5];
 
   return (
